@@ -6,9 +6,9 @@
 docker build -t didox/validador-cpf-java-turma-devops -f Dockerfile .
 
 ### Rodar imagem docker e gravar localmente ###
-docker run -d -p 8081:8080 --name validador-cpf-java-turma-devops didox/validador-cpf-java-turma-devops
+docker run -d -p 8081:8080 --name validador-cpf-java-turma-devops rodrigodecarvalho/validador-cpf-java-turma-devops
 ### Rodar imagem docker em modo iterativo localmente ###
-docker run -it -p 8081:8080 --name validador-cpf-java-turma-devops didox/validador-cpf-java-turma-devops
+docker run -it -p 8081:8080 --name validador-cpf-java-turma-devops rodrigodecarvalho/validador-cpf-java-turma-devops
 
 ### Para parar o seriviço rodar ###
 docker stop validador-cpf-java-turma-devops
@@ -23,7 +23,7 @@ docker rm validador-cpf-java-turma-devops
 docker login
 
 ### Criar a tag apontando para o repositório do docker hub ###
-docker tag didox/validador-cpf-java-turma-devops hub.docker.com/r/didox/validador-cpf-java-turma-devops
+docker tag rodrigodecarvalho/validador-cpf-java-turma-devops hub.docker.com/r/rodrigodecarvalho/validador-cpf-java-turma-devops
 
 ### Fazer o push da imagem para a docker hub ###
-docker push didox/validador-cpf-java-turma-devops
+docker push rodrigodecarvalho/validador-cpf-java-turma-devops
