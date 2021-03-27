@@ -27,3 +27,5 @@ docker tag rodrigodecarvalho/validador-cpf-java-turma-devops hub.docker.com/r/ro
 
 ### Fazer o push da imagem para a docker hub ###
 docker push rodrigodecarvalho/validador-cpf-java-turma-devops
+
+## test
