@@ -1,0 +1,6 @@
+build-java:
+  script:
+  - ./mvnw package
+
+
+  
