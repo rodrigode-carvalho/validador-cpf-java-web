@@ -1,10 +1,11 @@
-package com.validar.cpf.validadorCPF.controllers;
+package com.concrete.ValidadorCPF.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import com.validar.cpf.validadorCPF.models.Cliente;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import com.concrete.ValidadorCPF.models.Cliente;
 
 @Controller
 public class HomeController {
@@ -17,7 +18,7 @@ public class HomeController {
     public String validarCpf(Cliente cliente, Model model){
       model.addAttribute("cliente", cliente);
       model.addAttribute("validado", cliente.validarCPF());
-      return "home/cpfValidado";
+      return "home/valida-cpf";
     }
 
 }
