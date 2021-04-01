@@ -1,0 +1,41 @@
+package com.concrete.ValidadorCPF.models;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+
+@SpringBootTest
+
+
+//teste de commit
+
+public class ClienteTest {
+    @DisplayName("Teste para verificar a instancia de um objeto, preenchendo o nome e um cpf");
+    @Test
+
+    void testandoInstanciaDeCliente() {
+        Cliente cli = new Cliente();
+        cli.setNome("Danilo");
+        assertEquals(cli.getNome(), "Danilo");
+    }
+
+     
+  @DisplayName("Dado que eu passei um CPF válido, então devo receber uma validação verdadeira")
+  @Test
+	void testandoValidacaoDeCpfValida() {
+    Cliente cli = new Cliente();
+    cli.setCpf("235.086.800-10");
+    assertEquals(cli.validarCPF(), true);
+	}
+
+  @DisplayName("Dado que eu passei um CPF inválido, então devo receber uma validação falsa")
+  @Test
+	void testandoValidacaoDeCpfInvalida() {
+    Cliente cli = new Cliente();
+    cli.setCpf("235.086.800-11");
+    assertEquals(cli.validarCPF(), false);
+	}
+
+}
